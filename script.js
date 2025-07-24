@@ -27,16 +27,17 @@ const questions = [
   {
     question: "What does HTML stand for?",
     answers: [
-      "Hyper Text Markup Language",
+      
       "Home Tool Markup Language",
       "Hyperlinks and Text Markup Language",
-      "Hyper Tool Markdown Language"
+      "Hyper Tool Markdown Language",
+      "Hyper Text Markup Language"
     ],
     correct: "Hyper Text Markup Language"
   },
   {
     question: "What is the capital city of Kenya?",
-    answers: ["Nairobi", "Mombasa", "Kisumu", "Nakuru"],
+    answers: [ "Mombasa", "Kisumu", "Nairobi", "Nakuru"],
     correct: "Nairobi"
   },
   {
@@ -61,7 +62,7 @@ const questions = [
   },
   {
     question: "Which year did Kenya gain independence?",
-    answers: ["1963", "1960", "1964", "1965"],
+    answers: ["1960", "1963", "1964", "1965"],
     correct: "1963"
   },
   {
@@ -69,14 +70,10 @@ const questions = [
     answers: ["NaCl", "KCl", "Na2CO3", "CaCl2"],
     correct: "NaCl"
   },
-  {
-    question: "Who was Kenya's first vice president?",
-    answers: ["Jaramogi Oginga Odinga", "Tom Mboya", "Daniel Moi", "George Saitoti"],
-    correct: "Jaramogi Oginga Odinga"
-  },
+  
   {
     question: "Which planet is known as the Red Planet?",
-    answers: ["Mars", "Venus", "Jupiter", "Mercury"],
+    answers: [ "Venus", "Jupiter", "Mercury" , "Mars"],
     correct: "Mars"
   },
   {
@@ -101,7 +98,7 @@ const questions = [
   },
   {
     question: "Which element has the chemical symbol 'O'?",
-    answers: ["Oxygen", "Gold", "Osmium", "Iron"],
+    answers: ["Gold", "Osmium", "Oxygen", "Iron"],
     correct: "Oxygen"
   },
   {
@@ -126,12 +123,12 @@ const questions = [
   },
   {
     question: "Which country hosted the 2022 FIFA World Cup?",
-    answers: ["Qatar", "Russia", "USA", "Brazil"],
+    answers: [ "Russia", "Qatar", "USA", "Brazil"],
     correct: "Qatar"
   },
   {
     question: "Which country has won the most FIFA World Cups?",
-    answers: ["Brazil", "Germany", "Italy", "Argentina"],
+    answers: ["Germany", "Italy", "Argentina", "Brazil"],
     correct: "Brazil"
   },
   {
@@ -141,7 +138,7 @@ const questions = [
   },
   {
     question: "Which Kenyan river is the longest?",
-    answers: ["Tana River", "Athi River", "Yala River", "Nzoia River"],
+    answers: ["Athi River", "Yala River", "Tana River", "Nzoia River"],
     correct: "Tana River"
   },
   {
@@ -151,7 +148,7 @@ const questions = [
   },
   {
     question: "Who is the author of 'River Between'?",
-    answers: ["Ngũgĩ wa Thiong'o", "Meja Mwangi", "Chinua Achebe", "Grace Ogot"],
+    answers: [ "Meja Mwangi", "Ngũgĩ wa Thiong'o", "Chinua Achebe", "Grace Ogot"],
     correct: "Ngũgĩ wa Thiong'o"
   },
   {
@@ -176,7 +173,7 @@ const questions = [
   },
   {
     question: "Which town is famous for flamingos in Kenya?",
-    answers: ["Nakuru", "Naivasha", "Kisumu", "Eldoret"],
+    answers: [ "Naivasha", "Kisumu", "Eldoret" , "Nakuru"],
     correct: "Nakuru"
   },
   {
@@ -186,17 +183,17 @@ const questions = [
   },
   {
     question: "What is the boiling point of water in Celsius?",
-    answers: ["100°C", "90°C", "80°C", "120°C"],
+    answers: [ "90°C", "100°C", "80°C", "120°C"],
     correct: "100°C"
   },
   {
     question: "Which day is celebrated as Madaraka Day in Kenya?",
-    answers: ["June 1st", "October 20th", "December 12th", "May 1st"],
+    answers: [ "October 20th", "December 12th", "May 1st", "June 1st"],
     correct: "June 1st"
   },
   {
     question: "What is the largest organ in the human body?",
-    answers: ["Skin", "Liver", "Heart", "Brain"],
+    answers: [ "Liver", "Skin", "Heart", "Brain"],
     correct: "Skin"
   },
   {
@@ -206,12 +203,12 @@ const questions = [
   },
   {
     question: "Which gas is most abundant in the Earth's atmosphere?",
-    answers: ["Nitrogen", "Oxygen", "Carbon Dioxide", "Hydrogen"],
+    answers: [ "Oxygen", "Carbon Dioxide", "Hydrogen", "Nitrogen"],
     correct: "Nitrogen"
   },
   {
     question: "Which Kenyan city is known as the 'Green City in the Sun'?",
-    answers: ["Nairobi", "Nakuru", "Eldoret", "Kisumu"],
+    answers: [ "Nakuru", "Eldoret", "Nairobi", "Kisumu"],
     correct: "Nairobi"
   },
   {
@@ -227,26 +224,22 @@ const questions = [
   {
     question: "What was the Mau Mau uprising?",
     answers: [
-      "Kenyan independence rebellion",
+    
       "Religious movement",
+       "Kenyan independence rebellion",
       "Tribal conflict",
       "Colonial tax protest"
     ],
     correct: "Kenyan independence rebellion"
   },
   {
-    question: "Who was the second  vice president of Kenya?",
-    answers: ["Daniel arap Moi", "Mwai Kibaki", "Uhuru Kenyatta", "Raila Odinga"],
-    correct: "Daniel arap Moi"
-  },
-  {
     question: "Which natural wonder is shared between Kenya and Tanzania?",
-    answers: ["Mount Kilimanjaro", "Lake Victoria", "Lake Nakuru", "Ngorongoro Crater"],
+    answers: ["Lake Victoria", "Lake Nakuru", "Mount Kilimanjaro", "Ngorongoro Crater"],
     correct: "Mount Kilimanjaro"
   },
   {
     question: "What is the main component of the sun?",
-    answers: ["Hydrogen", "Helium", "Oxygen", "Carbon"],
+    answers: ["Helium", "Oxygen", "Carbon", "Hydrogen"],
     correct: "Hydrogen"
   }
 ];
@@ -302,22 +295,23 @@ answerButtons.forEach(btn => {
     const selectedAnswer = btn.innerText;
     const correctAnswer = questions[currentQuestionIndex].correct;
 
+    // Disable all buttons
     answerButtons.forEach(button => {
       button.disabled = true;
-      if (button.innerText === correctAnswer) {
-        button.classList.add("correct");
-      } else {
-        button.classList.add("wrong");
-      }
     });
 
+    // Only highlight the clicked one
     if (selectedAnswer === correctAnswer) {
+      btn.classList.add("correct");
       score++;
+    } else {
+      btn.classList.add("wrong");
     }
 
     nextBtn.style.display = "inline-block";
   });
 });
+
 
 nextBtn.addEventListener("click", () => {
   currentQuestionIndex++;
