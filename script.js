@@ -25,81 +25,15 @@ let isAnswerSelected = false;
 
 const questions = [
   {
-    question: "What does HTML stand for?",
-    answers: [
-      
-      "Home Tool Markup Language",
-      "Hyperlinks and Text Markup Language",
-      "Hyper Tool Markdown Language",
-      "Hyper Text Markup Language"
-    ],
-    correct: "Hyper Text Markup Language"
-  },
-  {
-    question: "What is the capital city of Kenya?",
-    answers: [ "Mombasa", "Kisumu", "Nairobi", "Nakuru"],
-    correct: "Nairobi"
-  },
-  {
-    question: "What does CSS stand for?",
-    answers: [
-      "Colorful Style Sheets",
-      "Cascading Style Sheets",
-      "Creative Style Sheets",
-      "Computer Style Sheets"
-    ],
-    correct: "Cascading Style Sheets"
-  },
-  {
-    question: "Which footballer is nicknamed 'The Egyptian King'?",
-    answers: ["Mohamed Salah", "Trezeguet", "Amr Zaki", "Ahmed Hegazi"],
-    correct: "Mohamed Salah"
-  },
-  {
-    question: "Which blood cells help fight infections?",
-    answers: ["Red blood cells", "Platelets", "White blood cells", "Plasma"],
-    correct: "White blood cells"
-  },
-  {
-    question: "Which year did Kenya gain independence?",
-    answers: ["1960", "1963", "1964", "1965"],
-    correct: "1963"
-  },
-  {
     question: "What is the chemical formula for table salt?",
     answers: ["NaCl", "KCl", "Na2CO3", "CaCl2"],
     correct: "NaCl"
   },
   
   {
-    question: "Which planet is known as the Red Planet?",
-    answers: [ "Venus", "Jupiter", "Mercury" , "Mars"],
-    correct: "Mars"
-  },
-  {
-    question: "What does URL stand for?",
-    answers: [
-      "Uniform Resource Locator",
-      "Universal Reference Link",
-      "Unified Routing Language",
-      "User Resource Login"
-    ],
-    correct: "Uniform Resource Locator"
-  },
-  {
     question: "Which programming language is primarily used for styling web pages?",
     answers: ["HTML", "CSS", "JavaScript", "Python"],
     correct: "CSS"
-  },
-  {
-    question: "Which planet has the most moons?",
-    answers: ["Saturn", "Jupiter", "Uranus", "Neptune"],
-    correct: "Saturn"
-  },
-  {
-    question: "Which element has the chemical symbol 'O'?",
-    answers: ["Gold", "Osmium", "Oxygen", "Iron"],
-    correct: "Oxygen"
   },
   {
     question: "Who composed the Kenyan national anthem?",
@@ -116,131 +50,41 @@ const questions = [
     answers: ["Cerebrum", "Cerebellum", "Medulla", "Thalamus"],
     correct: "Cerebellum"
   },
-  {
-    question: "How many counties are there in Kenya?",
-    answers: ["47", "48", "46", "50"],
-    correct: "47"
-  },
-  {
-    question: "Which country hosted the 2022 FIFA World Cup?",
-    answers: [ "Russia", "Qatar", "USA", "Brazil"],
-    correct: "Qatar"
-  },
+
   {
     question: "Which country has won the most FIFA World Cups?",
     answers: ["Germany", "Italy", "Argentina", "Brazil"],
     correct: "Brazil"
   },
-  {
-    question: "Who won the Ballon d'Or in 2023?",
-    answers: ["Lionel Messi", "Erling Haaland", "Kylian Mbappé", "Cristiano Ronaldo"],
-    correct: "Lionel Messi"
-  },
-  {
-    question: "Which Kenyan river is the longest?",
-    answers: ["Athi River", "Yala River", "Tana River", "Nzoia River"],
-    correct: "Tana River"
-  },
+
   {
     question: "What vitamin is produced when the skin is exposed to sunlight?",
     answers: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"],
     correct: "Vitamin D"
   },
-  {
-    question: "Who is the author of 'River Between'?",
-    answers: [ "Meja Mwangi", "Ngũgĩ wa Thiong'o", "Chinua Achebe", "Grace Ogot"],
-    correct: "Ngũgĩ wa Thiong'o"
-  },
-  {
-    question: "What is the national language of Kenya?",
-    answers: ["Kiswahili", "English", "Luhya", "Kikuyu"],
-    correct: "Kiswahili"
-  },
-  {
-    question: "Which tag is used for JavaScript?",
-    answers: ["<javascript>", "<script>", "<js>", "<code>"],
-    correct: "<script>"
-  },
-  {
-    question: "How many players start a football match per team?",
-    answers: ["9", "10", "11", "12"],
-    correct: "11"
-  },
-  {
-    question: "Which Kenyan club is nicknamed 'K’Ogalo'?",
-    answers: ["Gor Mahia", "AFC Leopards", "Tusker FC", "Sofapaka"],
-    correct: "Gor Mahia"
-  },
-  {
-    question: "Which town is famous for flamingos in Kenya?",
-    answers: [ "Naivasha", "Kisumu", "Eldoret" , "Nakuru"],
-    correct: "Nakuru"
-  },
+
   {
     question: "What is the unit of electric current?",
     answers: ["Ampere", "Volt", "Ohm", "Watt"],
     correct: "Ampere"
   },
+
   {
     question: "What is the boiling point of water in Celsius?",
     answers: [ "90°C", "100°C", "80°C", "120°C"],
     correct: "100°C"
   },
+  
   {
     question: "Which day is celebrated as Madaraka Day in Kenya?",
     answers: [ "October 20th", "December 12th", "May 1st", "June 1st"],
     correct: "June 1st"
   },
-  {
-    question: "What is the largest organ in the human body?",
-    answers: [ "Liver", "Skin", "Heart", "Brain"],
-    correct: "Skin"
-  },
-  {
-    question: "Which organ pumps blood throughout the body?",
-    answers: ["Heart", "Lungs", "Kidneys", "Liver"],
-    correct: "Heart"
-  },
-  {
-    question: "Which gas is most abundant in the Earth's atmosphere?",
-    answers: [ "Oxygen", "Carbon Dioxide", "Hydrogen", "Nitrogen"],
-    correct: "Nitrogen"
-  },
+   
   {
     question: "Which Kenyan city is known as the 'Green City in the Sun'?",
     answers: [ "Nakuru", "Eldoret", "Nairobi", "Kisumu"],
     correct: "Nairobi"
-  },
-  {
-  question: "Which vitamin is produced when the human skin is exposed to sunlight?",
-  answers: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"],
-  correct: "Vitamin D"
-},
-  {
-    question: "What device is used to measure temperature?",
-    answers: ["Thermometer", "Barometer", "Altimeter", "Manometer"],
-    correct: "Thermometer"
-  },
-  {
-    question: "What was the Mau Mau uprising?",
-    answers: [
-    
-      "Religious movement",
-       "Kenyan independence rebellion",
-      "Tribal conflict",
-      "Colonial tax protest"
-    ],
-    correct: "Kenyan independence rebellion"
-  },
-  {
-    question: "Which natural wonder is shared between Kenya and Tanzania?",
-    answers: ["Lake Victoria", "Lake Nakuru", "Mount Kilimanjaro", "Ngorongoro Crater"],
-    correct: "Mount Kilimanjaro"
-  },
-  {
-    question: "What is the main component of the sun?",
-    answers: ["Helium", "Oxygen", "Carbon", "Hydrogen"],
-    correct: "Hydrogen"
   }
 ];
 
